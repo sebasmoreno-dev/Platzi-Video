@@ -1,0 +1,109 @@
+
+.header {
+	@include display-header;
+	background-color: $color-secundario;
+	width: 100%;
+	height: 80px;
+}
+
+.header__img {
+	@include img;
+}
+
+.login {
+	@include background;
+	@include display;
+	flex-direction: column;
+	padding: 0px 30px;
+	min-height: calc(100vh - 200px);
+	&__container {
+		@include login-container;
+	&--form {
+		display: flex;
+		flex-direction: column;
+		label {
+			font-size: 14px;
+			}
+		}
+	&--remember-me {
+		color: $color-primario;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 10px;
+		a {
+			color: $color-primario;
+			font-size: 14px;
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+			}
+		}
+	&--social-media > div {
+			display:flex;
+			align-items: center;
+			font-size:14px;
+			margin-bottom:10px;
+		}
+	div > img {
+				width: 30px;
+				margin-right:10px;
+			}
+	&--register {
+		font-size: 14px;
+		a {
+			color: $color-primario;
+			font-weight: bold;
+			font-size: 16px;
+			text-decoration: none;
+			}
+		a:hover {
+			text-decoration: underline;
+			}
+		}
+	}
+}
+
+.input {
+	@include input;
+}
+
+::placeholder {
+	color: $color-primario;
+}
+
+.button {
+	@include button;
+}
+
+.footer {
+	background-color: #ab88ff;
+	@include display;
+	height: 100px;
+	width: 100%;
+	a {
+		color: $color-primario;
+		cursor: pointer;
+		font-size: 14px;
+		padding-left: 30px;
+		text-decoration: none;
+	}
+	a:hover {
+	text-decoration: underline;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.login__container {
+		background-color: transparent;
+		border: none;
+		padding: 0px;
+		width: 100%;
+	}
+	.footer {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+}
+
