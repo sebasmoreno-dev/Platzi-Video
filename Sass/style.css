@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Muli", sans-serif;
+  box-sizing: border-box;
 }
 
 .header {
@@ -452,9 +453,14 @@ body {
   width: 40px;
 }
 
-.header__menu--profile p {
+.header__menu--profile a {
   margin: 0px;
   color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 main {
@@ -506,9 +512,9 @@ main {
 .carrousel {
   background: #8f57fd;
   width: 100%;
-  overflow: scroll;
-  padding: 50px;
+  padding: 20px;
   position: relative;
+  margin: 30px;
 }
 
 .carrousel__container {
