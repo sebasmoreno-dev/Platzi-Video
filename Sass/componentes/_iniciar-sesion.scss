@@ -77,10 +77,10 @@
 	@include button;
 }
 
-.footer {
-	background-color: #ab88ff;
+.footer__login {
+	background-color: transparent;
 	@include display;
-	height: 100px;
+	height: 180px;
 	width: 100%;
 	a {
 		color: $color-primario;
