@@ -198,6 +198,10 @@ body {
   letter-spacing: 1px;
   margin: 10px 0px;
 }
+.button a {
+  text-decoration: none;
+  color: white;
+}
 
 .footer__login {
   background-color: transparent;
@@ -418,12 +422,12 @@ body {
   right: 0;
   width: 100px;
   text-align: right;
-}
-
-.header__menu:hover ul {
   display: block;
 }
 
+/* .header__menu:hover ul {
+
+} */
 .header__menu li {
   margin: 10px 0;
 }
@@ -454,7 +458,7 @@ body {
 }
 
 main {
-  background: linear-gradient(#21c08b, #8f57fd);
+  background: #8D59FB;
 }
 
 .main {
@@ -482,14 +486,18 @@ main {
   width: 70%;
 }
 
+.main__input:hover {
+  border: 2px solid white;
+}
+
 ::placeholder {
   color: white;
 }
 
 .categories__title {
   color: white;
-  font-size: 16px;
-  position: absolute;
+  font-size: 20px;
+  font-weight: 400;
   padding-left: 30px;
   width: 100%;
 }
@@ -499,7 +507,7 @@ main {
   background: #8f57fd;
   width: 100%;
   overflow: scroll;
-  padding: 30px;
+  padding: 50px;
   position: relative;
 }
 
@@ -547,9 +555,8 @@ main {
   font-size: 10px;
   opacity: 1;
   transition: 450ms opacity;
-  padding: 10px;
+  padding: 8px;
   position: absolute;
-  top: 0;
   left: 0;
   bottom: 0;
   right: 0;
