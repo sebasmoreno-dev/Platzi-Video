@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
     <link rel="stylesheet" href="../../CSS/style.css">
     <title>Play</title>
 </head>
@@ -22,9 +23,49 @@
 		</div>
 	</header>
 
-    <section>
-        <div></div>
-    </section>
+    <main class="main__play">
+        <div class="main__container">
+            <p class="logo"><i class="fas fa-music"></i> Music</p>
+            
+            <!-- left part -->
+            <div class="left">
+                <!-- song image -->
+                <img src="/" alt="" class="track__image">
+                <div class="volume">
+                    <p class="volume__show">90</p>
+                    <i class="fas fa-volume-up" class="volume__icon" onclick="mute_sound()"></i>
+                    <input type="range" min="0" max="100" value="90" onchange="volume_change()">
+                </div>
+            </div>
+            
+            <!-- left part -->
+            <div class="right">
+                <div class="show__song__no">
+                    <p class="present">1</p>
+                    <p>/</p>
+                    <p class="total">5</p>
+                </div>
+            
+                <!-- son title -->
+                <p class="title mp3">Title mp3</p>
+                <p class="artist">Artist name</p>
+            
+                <!-- middle part -->
+                <div class="middle">
+                    <button  onclick="previous_song()" class="pre"><i class="fas fa-step-backward"></i></button>
+                    <button  onclick="justplay()" class="play"><i class="fas fa-play"></i></button>
+                    <button  onabort="next_song()" class="next"><i class="fas fa-step-forward"></i></button>
+                </div>
+            
+                <!-- song duration part -->
+                <div class="duration">
+                    <input type="range" min="0" max="100" value="0" class="duration slider" onchange="change_duration()">
+                </div>
+                <button class="auto" onclick="autoplay_switch()">Auto play <i class="fas fa-circle-notch"></i></button>
+            
+            </div>
+        </div>
+    </main>
 
     <footer class="footer">
 		<a href="./HTML/Componentes/404-error.html">Terminos de uso</a>

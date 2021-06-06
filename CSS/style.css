@@ -602,5 +602,107 @@ main {
   }
 }
 /*# sourceMappingURL=style.css.map */
+.main__play {
+  width: 100%;
+  height: 800px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#21c08b, #8f57fd);
+}
+
+.main__container {
+  position: relative;
+  height: 80%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #7570E2;
+  border-radius: 15px;
+  box-shadow: 1px 0px 20px 12px rgba(240, 240, 240, 0.1);
+  /* both range slider */
+  /* volume part */
+}
+.main__container button {
+  padding: 10px 12px;
+}
+.main__container .logo {
+  /* position: absolute; */
+  padding: 5px;
+  margin-bottom: auto;
+  white-space: pre;
+  top: 10;
+  left: 30;
+  font-size: 25px;
+  color: white;
+  text-transform: capitalize;
+}
+.main__container .logo i {
+  margin-right: 10px;
+}
+.main__container .right, .main__container .left {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main__container .left img {
+  height: 300px;
+  width: 80%;
+  border-radius: 15px;
+  box-shadow: 1px 0px 20px 12px rgba(240, 240, 240, 0.2);
+}
+.main__container input[type=range] {
+  -webkit-appearance: none;
+  width: 50%;
+  outline: none;
+  height: 2px;
+  margin: 0 15px;
+}
+.main__container input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  background: #21c08b;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.main__container .right input[type=range] {
+  width: 40%;
+}
+.main__container .left .volume {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.main__container .left .volume p {
+  font-size: 15px;
+}
+.main__container .left .volume i {
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 10px;
+  background: #21c08b;
+}
+.main__container .left .volume i:hover {
+  background: rgba(254, 254, 254, 0.1);
+}
+.main__container .left .volume__show {
+  padding: 6px 8px;
+  margin: 0 5px 0 0;
+  border-radius: 10px;
+  background: rgba(254, 254, 254, 0.1);
+}
 
 /*# sourceMappingURL=style.css.map */

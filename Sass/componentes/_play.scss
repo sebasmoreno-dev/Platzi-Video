@@ -1,0 +1,100 @@
+.main__play {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    @include display;
+    @include background;
+}
+
+
+.main__container {
+    position: relative;
+    height:80%;
+    width: 80%;
+    @include display;
+    background: #7570E2;
+    border-radius: 15px;
+    box-shadow: 1px 0px 20px 12px rgba(240, 240, 240, 0.1);
+    button {
+        padding: 10px 12px;
+    }
+    .logo {
+        /* position: absolute; */
+        padding: 5px;
+        margin-bottom: auto;
+        white-space: pre;
+        top: 10;
+        left: 30;
+        font-size: 25px;
+        color: $color-primario;
+        text-transform: capitalize;
+        i {
+            margin-right: 10px;
+        }
+    }
+    .right, .left {
+        position: relative;
+        height: 100%;
+        width: 50%;
+        @include display;
+        flex-direction: column;
+    }
+    .left img {
+        height: 300px;
+        width: 80%;
+        border-radius: 15px;
+        box-shadow: 1px 0px 20px 12px rgba(240, 240, 240, 0.2);
+    }
+
+    /* both range slider */
+    input[type="range"] {
+        -webkit-appearance:none;
+        width: 50%;
+        outline: none;
+        height: 2px;
+        margin: 0 15px;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance:none;
+        height: 20px;
+        width: 20px;
+        background: $color-secundario;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .right input[type="range"]{
+        width: 40%;
+    }
+
+    /* volume part */
+    .left .volume {
+        position: absolute;
+        bottom: 10%;
+        left: 0;
+        width: 100%;
+        height: 30px;
+        @include display;
+        color: $color-primario;
+        p {
+            font-size: 15px;
+        }
+        i {
+            cursor: pointer;
+            padding: 6px 8px;
+            border-radius:10px;
+            background: $color-secundario;
+        }
+        i:hover {
+            background: rgba(254,254,254,0.1);
+        }
+        &__show {
+            padding: 6px 8px;
+            margin: 0 5px 0 0;
+            border-radius:10px;
+            background: rgba(254,254,254,0.1);
+            
+        }
+    }
+
+    
+}
