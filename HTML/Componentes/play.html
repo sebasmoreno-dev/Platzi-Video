@@ -26,43 +26,43 @@
     <main class="main__play">
         <div class="main__container">
             <p class="logo"><i class="fas fa-music"></i> Music</p>
-            
+
             <!-- left part -->
             <div class="left">
                 <!-- song image -->
-                <img src="/" alt="" class="track__image">
+                <img src="/" alt="" class="track__image" id="track_image">
                 <div class="volume">
-                    <p class="volume__show">90</p>
+                    <p class="volume__show--p" id="volume_show">90</p>
                     <i class="fas fa-volume-up" class="volume__icon" onclick="mute_sound()"></i>
-                    <input type="range" min="0" max="100" value="90" onchange="volume_change()">
+                    <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">
                 </div>
             </div>
-            
-            <!-- left part -->
+
+            <!-- right part -->
             <div class="right">
                 <div class="show__song__no">
-                    <p class="present">1</p>
+                    <p class="present" id="present">1</p>
                     <p>/</p>
-                    <p class="total">5</p>
+                    <p class="total" id="total">6</p>
                 </div>
-            
+
                 <!-- son title -->
-                <p class="right__title">Title mp3</p>
-                <p class="right__artist">Artist name</p>
-            
+                <p class="right__title"  id="title">Title mp3</p>
+                <p class="right__artist" id="artist">Artist name</p>
+
                 <!-- middle part -->
                 <div class="middle">
-                    <button  onclick="previous_song()" class="middle__pre"><i class="fas fa-step-backward"></i></button>
-                    <button  onclick="justplay()" class="middle__play"><i class="fas fa-play"></i></button>
-                    <button  onabort="next_song()" class="middle__next"><i class="fas fa-step-forward"></i></button>
+                    <button  onclick="previous_song()" id="pre"><i class="fas fa-step-backward" aria-hidden="true"></i></button>
+                    <button  onclick="justplay()" id="play"><i class="fas fa-play" aria-hidden="true"></i></button>
+                    <button  onclick="next_song()" id="next"><i class="fas fa-step-forward" aria-hidden="true"></i></button>
                 </div>
-            
+
                 <!-- song duration part -->
                 <div class="right__duration">
-                    <input type="range" min="0" max="100" value="0" class="right__duration--slider" onchange="change_duration()">
+                    <input type="range" min="0" max="100" value="0" class="right__duration--slider" id="duration_slider" onchange="change_duration()">
                 </div>
-                <button class="right__auto--play" onclick="autoplay_switch()">Auto play <i class="fas fa-circle-notch"></i></button>
-            
+                <button class="right__auto--play" onclick="autoplay_switch()" id="auto">Auto play <i class="fas fa-circle-notch"></i></button>
+
             </div>
         </div>
     </main>
@@ -72,5 +72,11 @@
 		<a href="./HTML/Componentes/404-error.html">Declaración de privacidad</a>
 		<a href="./HTML/Componentes/404-error.html">Centro de ayuda</a>
 	</footer>
+
+    <!-- Add javascript file -->
+    <script src="../../Js/script.js"></script>
+
+
+
 </body>
 </html>
