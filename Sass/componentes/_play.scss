@@ -92,9 +92,98 @@
             margin: 0 5px 0 0;
             border-radius:10px;
             background: rgba(254,254,254,0.1);
-            
         }
     }
-
-    
+    /* right part */
+    .right,
+    .middle {
+        width: 50%;
+        @include display;
+        &__title {
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-transform: capitalize;
+            font-size: 35px;
+            color: $color-primario;
+            }
+        &__play {
+            margin-right: 10px;
+            margin-left: 10px;
+            }
+        &__artist {
+            position: absolute;
+            top: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-transform: capitalize;
+            font-size: 18px;
+            color: $color-primario;
+            }
+        &__duration {
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 20px;
+            margin-top: 40px;
+            @include display;
+            }
+            p {
+                color: $color-primario;
+            }
+        }
+    button {
+        border: none;
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+        cursor: pointer;
+        outline: none;
+        transition: 0.5s;
+        background: rgba(245, 245, 245,0.1);
+        @include display;
+        }
+    .right__auto--play {
+        width: 130px;
+        font-size: 18px;
+        cursor: pointer;
+        margin-top: 45px;
+        border: none;
+        padding: 10px 14px;
+        color: $color-primario;
+        background: rgba(245, 245, 245, 0.1);
+        outline: none;
+        border-radius: 10px;
+        i {
+            margin-left: 8px;
+            }
+        }
+    .middle__play {
+        background: $color-secundario;
+    }
+    .right button:hover {
+        background: $color-secundario;
+    }
+    .right i:before {
+        color: $color-primario;
+        font-size: 20px;
+    }
+    .show__song__no {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 20px;
+        @include display;
+        padding: 8px 12px;
+        color: $color-primario;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.2);
+        p:nth-child(2){
+            margin: 0 5px;
+        }
+    }
 }

@@ -47,21 +47,21 @@
                 </div>
             
                 <!-- son title -->
-                <p class="title mp3">Title mp3</p>
-                <p class="artist">Artist name</p>
+                <p class="right__title">Title mp3</p>
+                <p class="right__artist">Artist name</p>
             
                 <!-- middle part -->
                 <div class="middle">
-                    <button  onclick="previous_song()" class="pre"><i class="fas fa-step-backward"></i></button>
-                    <button  onclick="justplay()" class="play"><i class="fas fa-play"></i></button>
-                    <button  onabort="next_song()" class="next"><i class="fas fa-step-forward"></i></button>
+                    <button  onclick="previous_song()" class="middle__pre"><i class="fas fa-step-backward"></i></button>
+                    <button  onclick="justplay()" class="middle__play"><i class="fas fa-play"></i></button>
+                    <button  onabort="next_song()" class="middle__next"><i class="fas fa-step-forward"></i></button>
                 </div>
             
                 <!-- song duration part -->
-                <div class="duration">
-                    <input type="range" min="0" max="100" value="0" class="duration slider" onchange="change_duration()">
+                <div class="right__duration">
+                    <input type="range" min="0" max="100" value="0" class="right__duration--slider" onchange="change_duration()">
                 </div>
-                <button class="auto" onclick="autoplay_switch()">Auto play <i class="fas fa-circle-notch"></i></button>
+                <button class="right__auto--play" onclick="autoplay_switch()">Auto play <i class="fas fa-circle-notch"></i></button>
             
             </div>
         </div>
