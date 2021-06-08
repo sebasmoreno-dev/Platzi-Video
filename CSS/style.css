@@ -28,7 +28,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(#21c08b, #8f57fd);
+  /* @include background; */
 }
 .main__box__error {
   font-size: 80px;
@@ -468,11 +468,15 @@ main {
 }
 
 .main {
-  height: 300px;
+  height: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+}
+
+.main__content {
+  background: linear-gradient(#21c08b, #8f57fd);
 }
 
 .main__title {
@@ -481,7 +485,7 @@ main {
 }
 
 .main__input {
-  background-color: #9060FC;
+  background-color: #7570E2;
   border: 2px solid white;
   border-radius: 25px;
   color: white;
@@ -504,21 +508,19 @@ main {
   color: white;
   font-size: 20px;
   font-weight: 400;
-  padding-left: 30px;
-  width: 100%;
+  width: 150px;
+  display: flex;
+  justify-content: center;
 }
 
 /* CARROUSEL */
 .carrousel {
   background: #8f57fd;
   width: 100%;
-  padding: 20px;
   position: relative;
-  /* margin: 10px; */
 }
 
 .carrousel__container {
-  margin: 25px 0px;
   padding-bottom: 10px;
 }
 
@@ -604,17 +606,19 @@ main {
 /*# sourceMappingURL=style.css.map */
 .main__play {
   width: 100%;
-  height: 800px;
+  height: 700px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(#21c08b, #8f57fd);
+  align-items: end;
+  margin-top: 40px;
+  /* @include background; */
 }
 
 .main__container {
   position: relative;
-  height: 80%;
+  height: 90%;
   width: 70%;
   display: flex;
   justify-content: center;

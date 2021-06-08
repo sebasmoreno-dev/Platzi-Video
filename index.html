@@ -25,17 +25,64 @@
 	</header>
 
     <main>
-        <section class="main">
-            <h2 class="main__title">¿Qué quieres ver hoy?</h2>
-            <input class="main__input" placeholder="   Buscar...">
-        </section>
+        
+        <div class="main__content">
+            <section class="main">
+                <h2 class="main__title">¿Qué quieres ver hoy?</h2>
+                <input class="main__input" placeholder="   Buscar...">
+            </section>
+            
+            <div class="main__play">
+                <div class="main__container">
+                    <p class="logo"><i class="fas fa-music"></i> Music</p>
+            
+                    <!-- left part -->
+                    <div class="left">
+                        <!-- song image -->
+                        <img src="/" alt="" class="track__image" id="track_image">
+                        <div class="volume">
+                            <p class="volume__show--p" id="volume_show">90</p>
+                            <i class="fas fa-volume-up" class="volume__icon" onclick="mute_sound()"></i>
+                            <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">
+                        </div>
+                    </div>
+            
+                    <!-- right part -->
+                    <div class="right">
+                        <div class="show__song__no">
+                            <p class="present" id="present">1</p>
+                            <p>/</p>
+                            <p class="total" id="total">6</p>
+                        </div>
+            
+                        <!-- son title -->
+                        <p class="right__title"  id="title">Title mp3</p>
+                        <p class="right__artist" id="artist">Artist name</p>
+            
+                        <!-- middle part -->
+                        <div class="middle">
+                            <button  onclick="previous_song()" id="pre"><i class="fas fa-step-backward" aria-hidden="true"></i></button>
+                            <button  onclick="justplay()" id="play"><i class="fas fa-play" aria-hidden="true"></i></button>
+                            <button  onclick="next_song()" id="next"><i class="fas fa-step-forward" aria-hidden="true"></i></button>
+                        </div>
+            
+                        <!-- song duration part -->
+                        <div class="right__duration">
+                            <input type="range" min="0" max="100" value="0" class="right__duration--slider" id="duration_slider" onchange="change_duration()">
+                        </div>
+                        <button class="right__auto--play" onclick="autoplay_switch()" id="auto">Auto play <i class="fas fa-circle-notch"></i></button>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <h2 class="categories__title">Mi lista</h2>
 
         <section class="carrousel">
             <div class="carrousel__container" >
                 <div class="carrousel-item">
-                    <img class="carrousel-item__img" src="./img/bagacian.jpg" alt="">
+                    <img class="carrousel-item__img" src="./img/drop.png" alt="">
                     <div class="carrousel-item__details">
                         <div>
                             <img src="./icons/play.png"/>
@@ -46,7 +93,7 @@
                     <p class="carrousel-item__details--subtitle" >2019 16 + 114 minutos</p>
                 </div>
                 <div class="carrousel-item">
-                    <img class="carrousel-item__img" src="./img/bagacian.jpg" alt="">
+                    <img class="carrousel-item__img" src="./img/colors.jpg" alt="">
                     <div class="carrousel-item__details">
                         <div>
                             <img src="./icons/play.png"/>
@@ -57,7 +104,7 @@
                     <p class="carrousel-item__details--subtitle" >2019 16 + 114 minutos</p>
                 </div>
                 <div class="carrousel-item">
-                    <img class="carrousel-item__img" src="./img/bagacian.jpg" alt="">
+                    <img class="carrousel-item__img" src="./img/kangaroo.jpg" alt="">
                     <div class="carrousel-item__details">
                         <div>
                             <img src="./icons/play.png"/>
@@ -68,7 +115,7 @@
                     <p class="carrousel-item__details--subtitle" >2019 16 + 114 minutos</p>
                 </div>
                 <div class="carrousel-item">
-                    <img class="carrousel-item__img" src="./img/bagacian.jpg" alt="">
+                    <img class="carrousel-item__img" src="./img/slip.jpg" alt="">
                     <div class="carrousel-item__details">
                         <div>
                             <img src="./icons/play.png"/>
@@ -79,7 +126,7 @@
                     <p class="carrousel-item__details--subtitle" >2019 16 + 114 minutos</p>
                 </div>
                 <div class="carrousel-item">
-                    <img class="carrousel-item__img" src="./img/bagacian.jpg" alt="">
+                    <img class="carrousel-item__img" src="./img/stolen.jpg" alt="">
                     <div class="carrousel-item__details">
                         <div>
                             <img src="./icons/play.png"/>
@@ -90,7 +137,7 @@
                     <p class="carrousel-item__details--subtitle" >2019 16 + 114 minutos</p>
                 </div>
                 <div class="carrousel-item">
-                    <img class="carrousel-item__img" src="./img/bagacian.jpg" alt="">
+                    <img class="carrousel-item__img" src="./img/blaze.jpg" alt="">
                     <div class="carrousel-item__details">
                         <div>
                             <img src="./icons/play.png"/>
@@ -100,62 +147,6 @@
                     <p class="carrousel-item__details--title" >Título descriptivo</p>
                     <p class="carrousel-item__details--subtitle" >2019 16 + 114 minutos</p>
                 </div>
-                <div class="carrousel-item">
-                    <img class="carrousel-item__img" src="./img/bagacian.jpg" alt="">
-                    <div class="carrousel-item__details">
-                        <div>
-                            <img src="./icons/play.png"/>
-                            <img src="./icons/mas.png" alt="">
-                        </div>
-                    </div>
-                    <p class="carrousel-item__details--title" >Título descriptivo</p>
-                    <p class="carrousel-item__details--subtitle" >2019 16 + 114 minutos</p>
-                </div>
-                <div class="carrousel-item">
-                    <img class="carrousel-item__img" src="./img/bagacian.jpg" alt="">
-                    <div class="carrousel-item__details">
-                        <div>
-                            <img src="./icons/play.png"/>
-                            <img src="./icons/mas.png" alt="">
-                        </div>
-                    </div>
-                    <p class="carrousel-item__details--title" >Título descriptivo</p>
-                    <p class="carrousel-item__details--subtitle" >2019 16 + 114 minutos</p>
-                </div>
-                <div class="carrousel-item">
-                    <img class="carrousel-item__img" src="./img/bagacian.jpg" alt="">
-                    <div class="carrousel-item__details">
-                        <div>
-                            <img src="./icons/play.png"/>
-                            <img src="./icons/mas.png" alt="">
-                        </div>
-                    </div>
-                    <p class="carrousel-item__details--title" >Título descriptivo</p>
-                    <p class="carrousel-item__details--subtitle" >2019 16 + 114 minutos</p>
-                </div>
-                <div class="carrousel-item">
-                    <img class="carrousel-item__img" src="./img/bagacian.jpg" alt="">
-                    <div class="carrousel-item__details">
-                        <div>
-                            <img src="./icons/play.png"/>
-                            <img src="./icons/mas.png" alt="">
-                        </div>
-                    </div>
-                    <p class="carrousel-item__details--title" >Título descriptivo</p>
-                    <p class="carrousel-item__details--subtitle" >2019 16 + 114 minutos</p>
-                </div>
-                <div class="carrousel-item">
-                    <img class="carrousel-item__img" src="./img/bagacian.jpg" alt="">
-                    <div class="carrousel-item__details">
-                        <div>
-                            <img src="./icons/play.png"/>
-                            <img src="./icons/mas.png" alt="">
-                        </div>
-                    </div>
-                    <p class="carrousel-item__details--title" >Título descriptivo</p>
-                    <p class="carrousel-item__details--subtitle" >2019 16 + 114 minutos</p>
-                </div>
-            </div>
         </section>
 
         <h2 class="categories__title">Mis Favoritos</h2>
@@ -163,7 +154,7 @@
         <section class="carrousel">
             <div class="carrousel__container" >
                 <div class="carrousel-item">
-                    <img class="carrousel-item__img" src="./img/bagacian.jpg" alt="">
+                    <img class="carrousel-item__img" src="./img/drop.png" alt="">
                     <div class="carrousel-item__details">
                         <div>
                             <img src="./icons/play.png"/>
@@ -174,7 +165,7 @@
                     <p class="carrousel-item__details--subtitle" >2019 16 + 114 minutos</p>
                 </div>
                 <div class="carrousel-item">
-                    <img class="carrousel-item__img" src="./img/bagacian.jpg" alt="">
+                    <img class="carrousel-item__img" src="./img/colors.jpg" alt="">
                     <div class="carrousel-item__details">
                         <div>
                             <img src="./icons/play.png"/>
@@ -185,7 +176,7 @@
                     <p class="carrousel-item__details--subtitle" >2019 16 + 114 minutos</p>
                 </div>
                 <div class="carrousel-item">
-                    <img class="carrousel-item__img" src="./img/bagacian.jpg" alt="">
+                    <img class="carrousel-item__img" src="./img/kangaroo.jpg" alt="">
                     <div class="carrousel-item__details">
                         <div>
                             <img src="./icons/play.png"/>
@@ -196,7 +187,7 @@
                     <p class="carrousel-item__details--subtitle" >2019 16 + 114 minutos</p>
                 </div>
                 <div class="carrousel-item">
-                    <img class="carrousel-item__img" src="./img/bagacian.jpg" alt="">
+                    <img class="carrousel-item__img" src="./img/slip.jpg" alt="">
                     <div class="carrousel-item__details">
                         <div>
                             <img src="./icons/play.png"/>
@@ -207,7 +198,7 @@
                     <p class="carrousel-item__details--subtitle" >2019 16 + 114 minutos</p>
                 </div>
                 <div class="carrousel-item">
-                    <img class="carrousel-item__img" src="./img/bagacian.jpg" alt="">
+                    <img class="carrousel-item__img" src="./img/stolen.jpg" alt="">
                     <div class="carrousel-item__details">
                         <div>
                             <img src="./icons/play.png"/>
@@ -218,7 +209,7 @@
                     <p class="carrousel-item__details--subtitle" >2019 16 + 114 minutos</p>
                 </div>
                 <div class="carrousel-item">
-                    <img class="carrousel-item__img" src="./img/bagacian.jpg" alt="">
+                    <img class="carrousel-item__img" src="./img/blaze.jpg" alt="">
                     <div class="carrousel-item__details">
                         <div>
                             <img src="./icons/play.png"/>
@@ -228,62 +219,6 @@
                     <p class="carrousel-item__details--title" >Título descriptivo</p>
                     <p class="carrousel-item__details--subtitle" >2019 16 + 114 minutos</p>
                 </div>
-                <div class="carrousel-item">
-                    <img class="carrousel-item__img" src="./img/bagacian.jpg" alt="">
-                    <div class="carrousel-item__details">
-                        <div>
-                            <img src="./icons/play.png"/>
-                            <img src="./icons/mas.png" alt="">
-                        </div>
-                    </div>
-                    <p class="carrousel-item__details--title" >Título descriptivo</p>
-                    <p class="carrousel-item__details--subtitle" >2019 16 + 114 minutos</p>
-                </div>
-                <div class="carrousel-item">
-                    <img class="carrousel-item__img" src="./img/bagacian.jpg" alt="">
-                    <div class="carrousel-item__details">
-                        <div>
-                            <img src="./icons/play.png"/>
-                            <img src="./icons/mas.png" alt="">
-                        </div>
-                    </div>
-                    <p class="carrousel-item__details--title" >Título descriptivo</p>
-                    <p class="carrousel-item__details--subtitle" >2019 16 + 114 minutos</p>
-                </div>
-                <div class="carrousel-item">
-                    <img class="carrousel-item__img" src="./img/bagacian.jpg" alt="">
-                    <div class="carrousel-item__details">
-                        <div>
-                            <img src="./icons/play.png"/>
-                            <img src="./icons/mas.png" alt="">
-                        </div>
-                    </div>
-                    <p class="carrousel-item__details--title" >Título descriptivo</p>
-                    <p class="carrousel-item__details--subtitle" >2019 16 + 114 minutos</p>
-                </div>
-                <div class="carrousel-item">
-                    <img class="carrousel-item__img" src="./img/bagacian.jpg" alt="">
-                    <div class="carrousel-item__details">
-                        <div>
-                            <img src="./icons/play.png"/>
-                            <img src="./icons/mas.png" alt="">
-                        </div>
-                    </div>
-                    <p class="carrousel-item__details--title" >Título descriptivo</p>
-                    <p class="carrousel-item__details--subtitle" >2019 16 + 114 minutos</p>
-                </div>
-                <div class="carrousel-item">
-                    <img class="carrousel-item__img" src="./img/bagacian.jpg" alt="">
-                    <div class="carrousel-item__details">
-                        <div>
-                            <img src="./icons/play.png"/>
-                            <img src="./icons/mas.png" alt="">
-                        </div>
-                    </div>
-                    <p class="carrousel-item__details--title" >Título descriptivo</p>
-                    <p class="carrousel-item__details--subtitle" >2019 16 + 114 minutos</p>
-                </div>
-            </div>
         </section>
     </main>
 
@@ -293,5 +228,6 @@
 		<a href="./HTML/Componentes/404-error.html">Centro de ayuda</a>
 	</footer>
 
+    <script src="./Js/script.js"></script>
 </body>
 </html>

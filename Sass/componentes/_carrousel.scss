@@ -62,11 +62,15 @@ main {
 }
 
 .main {
-  height: 300px;
+  height: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+}
+
+.main__content {
+  @include background;
 }
 
 .main__title {
@@ -75,7 +79,7 @@ main {
 }
 
 .main__input {
-  background-color: #9060FC;
+  background-color: #7570E2;
   border: 2px solid white;
   border-radius: 25px;
   color: white;
@@ -98,8 +102,9 @@ main {
   color: white;
   font-size: 20px;
   font-weight:400;
-  padding-left: 30px;
-  width: 100%;
+  width: 150px;
+  display: flex;
+  justify-content: center;
 }
 
 /* CARROUSEL */
@@ -107,13 +112,10 @@ main {
 .carrousel {
   background: #8f57fd;
   width: 100%;
-  padding: 20px;
   position: relative;
-  /* margin: 10px; */
 }
 
 .carrousel__container {
-  margin: 25px 0px;
   padding-bottom: 10px;
 }
 

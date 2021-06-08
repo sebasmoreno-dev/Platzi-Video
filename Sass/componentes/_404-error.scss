@@ -12,7 +12,7 @@
 	flex-direction: column;
 	color: $color-primario;
 	@include display;
-    @include background;
+    /* @include background; */
 	&__box__error {
 		font-size: 80px;
 		color: white;
