@@ -24,33 +24,33 @@ let track = document.createElement('audio');
 /* All songs list */
 let All_song = [
     {   name: "Drop The Game",
-        path: "/Music/Drop-the-Game.mp3",
-        img: "/img/drop.png",
+        path: "../Music/Drop-the-Game.mp3",
+        img: "../img/drop.png",
         singer: "Flume y Chet Faker"
     },
     {   name: "Colors",
-        path: "/Music/Colors.mp3",
-        img: "/img/colors.jpg",
+        path: "../Music/Colors.mp3",
+        img: "../img/colors.jpg",
         singer: "Black Pumas"
     },
     {   name: "Kangaroo Court",
-        path: "/Music/Kangaroo-Court.mp3",
-        img: "/img/kangaroo.jpg",
+        path: "../Music/Kangaroo-Court.mp3",
+        img: "../img/kangaroo.jpg",
         singer: "Capital Cities"
     },
     {   name: "Slip",
-        path: "/Music/Slip.mp3",
-        img: "/img/slip.jpg",
+        path: "../Music/Slip.mp3",
+        img: "../img/slip.jpg",
         singer: "Elliot Moss"
     },
     {   name: "Stolen Dance",
-        path: "/Music/Stolen-Dance.mp3",
-        img: "/img/stolen.jpg",
+        path: "../Music/Stolen-Dance.mp3",
+        img: "../img/stolen.jpg",
         singer: "Milky Chance"
     },
     {   name: "Territory",
-        path: "/Music/The-Blaze-Territory.mp3",
-        img: "/img/blaze.jpg",
+        path: "../Music/The-Blaze-Territory.mp3",
+        img: "../img/blaze.jpg",
         singer: "The Blaze"
     },
 ];

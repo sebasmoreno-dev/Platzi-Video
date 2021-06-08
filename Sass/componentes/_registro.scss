@@ -77,6 +77,13 @@
 
 .button__login {
     @include button-login;
+	a {
+		color: white;
+		cursor: pointer;
+		font-size: 16px;
+		font-weight: bold;
+		text-decoration: none;
+	}
 }
 
 .footer__register {

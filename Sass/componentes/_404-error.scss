@@ -6,14 +6,14 @@
 	}
 }
 
-.main {
+.main__content {
     width:100%;
-    height:80vh;
+    height: 600px;
 	flex-direction: column;
 	color: $color-primario;
 	@include display;
-    /* @include background; */
-	&__box__error {
+    @include background;
+	&__error {
 		font-size: 80px;
 		color: white;
 		animation-duration: 2.5s;
@@ -34,7 +34,7 @@
 .footer__error {
 	background: $color-terciario;
 	@include display;
-	height: 60vh;
+	height: 255px;
 	width: 100%;
 	a {
 		color: white;
